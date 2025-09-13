@@ -1,125 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* BayVibe DC Design System - Dark theme with neon green accents */
 
 @layer base {
   :root {
-    /* Neon Dark Theme Base */
-    --background: 220 20% 8%;
-    --foreground: 180 100% 95%;
+    /* Dark Theme Base Colors */
+    --background: 218 35% 5%;  /* #0b0f16 */
+    --foreground: 0 0% 100%;   /* White text */
 
-    --card: 220 25% 12%;
-    --card-foreground: 180 100% 95%;
+    /* BayVibe DC Brand Colors */
+    --card: 220 25% 8%;           /* Dark card background */
+    --card-foreground: 0 0% 100%; /* White text on cards */
 
-    --popover: 220 30% 10%;
-    --popover-foreground: 180 100% 95%;
+    --popover: 220 25% 8%;
+    --popover-foreground: 0 0% 100%;
 
-    /* Neon Primary - Electric Cyan */
-    --primary: 180 100% 50%;
-    --primary-foreground: 220 20% 8%;
-    --primary-glow: 180 100% 70%;
+    --primary: 145 82% 59%;       /* Neon Green #27ff80 */
+    --primary-foreground: 218 35% 5%; /* Dark text on green */
 
-    /* Neon Secondary - Hot Pink */
-    --secondary: 320 100% 60%;
-    --secondary-foreground: 220 20% 8%;
-    --secondary-glow: 320 100% 80%;
+    --secondary: 220 25% 12%;     /* Slightly lighter dark */
+    --secondary-foreground: 0 0% 100%;
 
-    /* Neon Accent - Electric Purple */
-    --accent: 280 100% 65%;
-    --accent-foreground: 220 20% 8%;
-    --accent-glow: 280 100% 85%;
+    --muted: 220 15% 20%;         /* Muted gray */
+    --muted-foreground: 220 10% 60%; /* Muted text */
 
-    /* Muted elements */
-    --muted: 220 15% 20%;
-    --muted-foreground: 180 20% 70%;
+    --accent: 145 82% 59%;        /* Neon Green accent */
+    --accent-foreground: 218 35% 5%;
 
-    --destructive: 0 100% 60%;
-    --destructive-foreground: 220 20% 8%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 25% 25%;
-    --input: 220 25% 15%;
-    --ring: 180 100% 50%;
+    --border: 220 25% 15%;        /* Dark borders */
+    --input: 220 25% 12%;         /* Input backgrounds */
+    --ring: 145 82% 59%;          /* Green focus rings */
 
-    --radius: 0.75rem;
+    --radius: 0.75rem;            /* 12px rounded corners */
 
-    /* Neon Gradients */
-    --gradient-neon: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)));
-    --gradient-pulse: linear-gradient(45deg, hsl(var(--primary) / 0.8), hsl(var(--accent) / 0.8));
-    --gradient-bay: linear-gradient(180deg, hsl(var(--background)), hsl(220 30% 12%));
+    /* Custom BayVibe DC Design Tokens */
+    --neon-green: 145 82% 59%;    /* #27ff80 */
+    --neon-green-glow: 145 82% 59% / 0.5;
+    --dark-surface: 220 25% 8%;   /* Card/surface color */
+    --darker-surface: 220 30% 6%; /* Even darker surfaces */
+    --tech-blue: 210 100% 60%;    /* Accent blue */
+    
+    /* Gradients */
+    --gradient-neon: linear-gradient(135deg, hsl(145 82% 59%), hsl(145 82% 45%));
+    --gradient-dark: linear-gradient(135deg, hsl(220 25% 8%), hsl(220 30% 6%));
+    --gradient-hero: linear-gradient(135deg, hsl(218 35% 5%), hsl(220 25% 8%));
+    
+    /* Shadows and Glows */
+    --shadow-glow: 0 0 30px hsl(var(--neon-green-glow));
+    --shadow-card: 0 4px 20px hsl(220 30% 3% / 0.5);
+    --shadow-elevated: 0 8px 40px hsl(220 30% 3% / 0.6);
 
-    /* Neon Shadows */
-    --shadow-neon-primary: 0 0 20px hsl(var(--primary) / 0.5), 0 0 40px hsl(var(--primary) / 0.3);
-    --shadow-neon-secondary: 0 0 20px hsl(var(--secondary) / 0.5), 0 0 40px hsl(var(--secondary) / 0.3);
-    --shadow-neon-accent: 0 0 20px hsl(var(--accent) / 0.5), 0 0 40px hsl(var(--accent) / 0.3);
-    --shadow-pulse: 0 0 30px hsl(var(--primary) / 0.4);
+    /* Animation Timings */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    /* Animation Variables */
-    --transition-neon: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --pulse-duration: 2s;
+    /* Sidebar (keeping for compatibility) */
+    --sidebar-background: 220 25% 8%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 145 82% 59%;
+    --sidebar-primary-foreground: 218 35% 5%;
+    --sidebar-accent: 220 25% 12%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 25% 15%;
+    --sidebar-ring: 145 82% 59%;
   }
-}
 
-/* Neon Pulse Animation */
-@keyframes neon-pulse {
-  0%, 100% {
-    opacity: 1;
-    filter: brightness(1) drop-shadow(var(--shadow-neon-primary));
-  }
-  50% {
-    opacity: 0.8;
-    filter: brightness(1.2) drop-shadow(var(--shadow-pulse));
-  }
-}
-
-@keyframes neon-glow {
-  0%, 100% {
-    text-shadow: 
-      0 0 10px hsl(var(--primary) / 0.8),
-      0 0 20px hsl(var(--primary) / 0.6),
-      0 0 30px hsl(var(--primary) / 0.4);
-  }
-  50% {
-    text-shadow: 
-      0 0 15px hsl(var(--primary) / 1),
-      0 0 25px hsl(var(--primary) / 0.8),
-      0 0 40px hsl(var(--primary) / 0.6);
-  }
-}
-
-@keyframes gradient-pulse {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-/* Utility Classes */
-.neon-pulse {
-  animation: neon-pulse var(--pulse-duration) ease-in-out infinite;
-}
-
-.neon-glow {
-  animation: neon-glow var(--pulse-duration) ease-in-out infinite;
-}
-
-.gradient-pulse {
-  background: var(--gradient-neon);
-  background-size: 200% 200%;
-  animation: gradient-pulse 3s ease infinite;
-}
-
-.animation-delay-1000 {
-  animation-delay: 1s;
-}
-
-.animation-delay-2000 {
-  animation-delay: 2s;
 }
 
 @layer base {
@@ -128,6 +80,64 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-['Inter'] antialiased;
+    background: var(--gradient-hero);
+  }
+}
+
+@layer components {
+  /* BayVibe DC Custom Component Styles */
+  .btn-neon {
+    @apply bg-primary text-primary-foreground font-medium px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--neon-green-glow))] hover:scale-105 active:scale-95;
+  }
+
+  .card-tech {
+    @apply bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-card hover:-translate-y-1;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent;
+  }
+
+  .hero-text {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
+  }
+
+  .glow-hover {
+    @apply transition-all duration-300 hover:shadow-glow;
+  }
+
+  .fade-in-up {
+    @apply opacity-0 translate-y-8 transition-all duration-700;
+  }
+
+  .fade-in-up.animate {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Custom animations */
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes pulseGlow {
+    from {
+      box-shadow: 0 0 20px hsl(var(--neon-green) / 0.3);
+    }
+    to {
+      box-shadow: 0 0 40px hsl(var(--neon-green) / 0.6);
+    }
+  }
+
+  .tech-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+
+  .feature-icon {
+    @apply w-12 h-12 text-primary mb-4 transition-transform duration-300 group-hover:scale-110;
   }
 }
