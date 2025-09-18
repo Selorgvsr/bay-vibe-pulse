@@ -95,38 +95,6 @@ const ExpansionPlansNewTechnologies = () => {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-16 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Expansion Timeline</h2>
-          
-          <div className="space-y-8">
-            <div className="flex items-center space-x-6">
-              <div className="w-4 h-4 bg-green-400 rounded-full flex-shrink-0"></div>
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold text-white">2025 Q1-Q2</h3>
-                <p className="text-gray-300">Phase 1 expansion with 3 new regional facilities</p>
-              </div>
-            </div>
-            
-            <div className="flex items-center space-x-6">
-              <div className="w-4 h-4 bg-blue-400 rounded-full flex-shrink-0"></div>
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold text-white">2025 Q3-Q4</h3>
-                <p className="text-gray-300">Implementation of advanced cooling and AI systems</p>
-              </div>
-            </div>
-            
-            <div className="flex items-center space-x-6">
-              <div className="w-4 h-4 bg-purple-400 rounded-full flex-shrink-0"></div>
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold text-white">2026+</h3>
-                <p className="text-gray-300">Global expansion and emerging technology integration</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>
