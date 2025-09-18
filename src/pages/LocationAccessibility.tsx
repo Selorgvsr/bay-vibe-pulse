@@ -51,7 +51,7 @@ const LocationAccessibility = () => {
                   international regulations safeguards data security.
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-8 mt-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
                   <div className="bg-gray-700/50 p-6 rounded-lg">
                     <MapPin className="w-8 h-8 text-green-400 mb-4" />
                     <h3 className="text-xl font-semibold text-white mb-3">Strategic Positioning</h3>
