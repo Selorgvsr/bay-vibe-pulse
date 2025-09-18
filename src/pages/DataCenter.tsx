@@ -80,10 +80,6 @@ const DataCenter = () => {
             <div className="absolute inset-0 bg-gray-900/80"></div>
           </div>
 
-          {/* Transparent Overlay Image */}
-          <div className="absolute inset-0 z-5">
-            <img src="/lovable-uploads/10413a3f-a466-4a94-8fc4-6b10e9625660.png" alt="Next-Gen Data Center 3D Visualization" className="w-full h-full object-cover opacity-40" />
-          </div>
 
           {/* Content */}
           <div className="relative z-10 section-container text-center">
