@@ -61,32 +61,26 @@ const DigitalDataInfrastructure = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-b from-gray-900 to-gray-800">
-        <div className="container mx-auto px-6">
-          <div className="relative rounded-2xl overflow-hidden mb-12">
-            <div className="h-96 bg-gradient-to-r from-blue-900 via-cyan-900 to-blue-800 relative">
-              <div className="absolute inset-0 bg-black/20"></div>
-              <img 
-                src="/lovable-uploads/ed50a62b-c254-41be-8287-733c74d01932.png" 
-                alt="Digital Data Infrastructure" 
-                className="absolute inset-0 w-full h-full object-cover opacity-30"
-              />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center z-10">
-                  <h1 className="text-4xl md:text-6xl font-bold mb-4">
-                    Digital Data Infrastructure
-                  </h1>
-                  <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-                    Powering the future of data with digital precision and sustainability. Our infrastructure is scalable, secure, and built smarter by design. From cloud to core, we keep your world seamlessly connected. Welcome to the new generation of digital data conquest.
-                  </p>
-                </div>
-              </div>
-              {/* Animated lines overlay */}
-              <div className="absolute inset-0 opacity-30">
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent animate-pulse"></div>
-              </div>
-            </div>
-          </div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img src="/lovable-uploads/ed50a62b-c254-41be-8287-733c74d01932.png" alt="Digital Data Infrastructure" className="w-full h-full object-cover opacity-30" />
+          <div className="absolute inset-0 bg-gray-900/80"></div>
+        </div>
+
+        {/* Transparent Overlay Image */}
+        <div className="absolute inset-0 z-5">
+          <img src="/lovable-uploads/ed50a62b-c254-41be-8287-733c74d01932.png" alt="Digital Data Infrastructure" className="w-full h-full object-cover opacity-40" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 section-container text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-white">
+            Digital Data <span className="text-green-400">Infrastructure</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-16">
+            Comprehensive digital infrastructure solutions designed for reliability, efficiency, and scalability
+          </p>
         </div>
       </section>
 

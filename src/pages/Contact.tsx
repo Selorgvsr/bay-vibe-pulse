@@ -42,18 +42,26 @@ const Contact = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-br from-primary/10 to-secondary/10">
-          <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-          <div className="section-container relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                <span className="gradient-text">Contact</span> Us
-              </h1>
-              <p className="text-xl text-foreground/70 leading-relaxed mb-8">
-                Get in touch with our team of experts to discuss your data center needs 
-                and discover how we can support your business growth.
-              </p>
-            </div>
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            <img src="/lovable-uploads/8ce75b7a-cec9-451f-8bac-48e378819448.png" alt="Modern data center infrastructure" className="w-full h-full object-cover opacity-30" />
+            <div className="absolute inset-0 bg-gray-900/80"></div>
+          </div>
+
+          {/* Transparent Overlay Image */}
+          <div className="absolute inset-0 z-5">
+            <img src="/lovable-uploads/b474f183-a820-4ee0-8cf4-8827d1114708.png" alt="Glass-walled data center with servers and blue lighting" className="w-full h-full object-cover opacity-40" />
+          </div>
+
+          {/* Content */}
+          <div className="relative z-10 section-container text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-white">
+              <span className="text-green-400">Contact</span> Us
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-16">
+              Comprehensive support solutions designed for reliability, efficiency, and scalability
+            </p>
           </div>
         </section>
 

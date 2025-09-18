@@ -51,23 +51,26 @@ const BusinessRevenueModel = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-background to-green-900/20"></div>
-        
-        {/* Transparent Revenue Model Image Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <img src="/lovable-uploads/1fda760c-4d3d-4178-a311-2398db42091b.png" alt="Business Revenue Model - Buildings with dollar signs" className="w-full max-w-2xl opacity-30 object-contain" />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img src="/lovable-uploads/1fda760c-4d3d-4178-a311-2398db42091b.png" alt="Business Revenue Model - Buildings with dollar signs" className="w-full h-full object-cover opacity-30" />
+          <div className="absolute inset-0 bg-gray-900/80"></div>
         </div>
-        
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="bg-gradient-to-r from-blue-600/20 to-blue-800/20 rounded-2xl p-8 mb-12 mx-[12px] px-px">
-            
-            <p className="text-gray-300 text-lg leading-relaxed">
-              Our data center operates on a multi-stream revenue model, including colocation services, cloud hosting, and enterprise solutions. We generate income 
-              through server rentals, data storage, and managed IT services, ensuring scalability and security for businesses. Additionally, subscription-based cloud 
-              solutions and disaster recovery services provide long-term financial sustainability.
-            </p>
-          </div>
+
+        {/* Transparent Overlay Image */}
+        <div className="absolute inset-0 z-5">
+          <img src="/lovable-uploads/business-revenue-hero.png" alt="Business revenue infrastructure" className="w-full h-full object-cover opacity-40" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 section-container text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-white">
+            Business Revenue <span className="text-green-400">Model</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-16">
+            Comprehensive business solutions designed for reliability, efficiency, and scalability
+          </p>
         </div>
       </section>
 

@@ -71,25 +71,28 @@ const DataCenter = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Header />
       
-      <main className="pt-16">
-        {/* Hero Section with Data Center Image */}
-        <section className="relative py-20 bg-gradient-to-br from-slate-900 to-slate-800 overflow-hidden">
+      <main>
+        {/* Hero Section */}
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+          {/* Background Image */}
           <div className="absolute inset-0">
-            <img 
-              src="/lovable-uploads/d6ec8bdf-4e8f-431e-bac4-9fb9c6c761a6.png" 
-              alt="Data Center Building at Night" 
-              className="w-full h-full object-cover opacity-70"
-            />
-            <div className="absolute inset-0 bg-black/40"></div>
+            <img src="/lovable-uploads/d6ec8bdf-4e8f-431e-bac4-9fb9c6c761a6.png" alt="Data Center Building at Night" className="w-full h-full object-cover opacity-30" />
+            <div className="absolute inset-0 bg-gray-900/80"></div>
           </div>
-          <div className="section-container relative z-10">
-            <div className="max-w-4xl mx-auto">
-              <p className="text-sm text-blue-400 mb-4 uppercase tracking-wider">
-                LOCATION - SUSTAINABILITY - DATA AVAILABILITY THE CORE STRATEGY FOR A DATA CENTER FOCUSING IN COLLABORATION WITH CUSTOMERS WHERE AS TO SCALE A SUITABLE, SECURE, AND 
-                ENERGY-EFFICIENT FACILITY. STRONG TO SUPPORT SOLID GROWING DIGITAL INFRASTRUCTURE. LEADS THE 24/7V SENSOR CONTROL AND ADVANCE TECHNOLOGY, IS 
-                SUSTAINABLE PRACTICES.
-              </p>
-            </div>
+
+          {/* Transparent Overlay Image */}
+          <div className="absolute inset-0 z-5">
+            <img src="/lovable-uploads/10413a3f-a466-4a94-8fc4-6b10e9625660.png" alt="Next-Gen Data Center 3D Visualization" className="w-full h-full object-cover opacity-40" />
+          </div>
+
+          {/* Content */}
+          <div className="relative z-10 section-container text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-white">
+              Data <span className="text-green-400">Center</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-16">
+              Next-generation data center infrastructure designed for reliability, efficiency, and scalability
+            </p>
           </div>
         </section>
 

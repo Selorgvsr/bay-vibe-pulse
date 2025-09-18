@@ -9,24 +9,26 @@ const AboutUs = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-background to-blue-700/20"></div>
-        
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="text-center mb-12">
-            <div className="relative mb-8">
-              <img 
-                src="/lovable-uploads/a3559e42-6053-42f4-a276-44e79280862f.png" 
-                alt="Futuristic data center corridor with blue lighting and server racks" 
-                className="w-full rounded-lg shadow-2xl"
-              />
-            </div>
-            <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto">
-              At BayVibe DC, we specialize in next-generation data center solutions, offering secure, scalable, and high-performance infrastructure. Our 
-              commitment to innovation, sustainability, and reliability ensures seamless digital transformation for businesses worldwide. With cutting-edge 
-              technology and AI-driven optimizations, we empower enterprises to thrive in a connected world.
-            </p>
-          </div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img src="/lovable-uploads/a3559e42-6053-42f4-a276-44e79280862f.png" alt="Futuristic data center corridor with blue lighting and server racks" className="w-full h-full object-cover opacity-30" />
+          <div className="absolute inset-0 bg-gray-900/80"></div>
+        </div>
+
+        {/* Transparent Overlay Image */}
+        <div className="absolute inset-0 z-5">
+          <img src="/lovable-uploads/c1f12c46-b5df-406c-bd3e-102ac0968d8b.png" alt="Futuristic digital interface with circular blue holographic elements" className="w-full h-full object-cover opacity-40" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 section-container text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-white">
+            About <span className="text-green-400">Us</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-16">
+            Comprehensive data center solutions designed for reliability, efficiency, and scalability
+          </p>
         </div>
       </section>
 

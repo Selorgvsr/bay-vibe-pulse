@@ -9,29 +9,26 @@ const MaintenanceFutureInnovations = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-background to-blue-700/20"></div>
-        
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Data Center Excellence
-              </h1>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                We are committed to driving innovation through AI automation, sustainable technologies, and enhanced security. Our roadmap focuses on expanding 
-                edge computing and delivering smarter, scalable solutions to meet the evolving needs of businesses. Together, we build a future-ready infrastructure 
-                that empowers growth and resilience.
-              </p>
-            </div>
-            <div className="relative">
-              <img 
-                src="/lovable-uploads/maintenance-future-innovations-hero.png" 
-                alt="Modern data center with blue server racks and lighting" 
-                className="w-full rounded-lg shadow-2xl"
-              />
-            </div>
-          </div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img src="/lovable-uploads/maintenance-future-innovations-hero.png" alt="Modern data center with blue server racks and lighting" className="w-full h-full object-cover opacity-30" />
+          <div className="absolute inset-0 bg-gray-900/80"></div>
+        </div>
+
+        {/* Transparent Overlay Image */}
+        <div className="absolute inset-0 z-5">
+          <img src="/lovable-uploads/b62a70c3-2070-4796-87cc-bc4b11af0096.png" alt="AI & Edge Computing - Blue AI cube processor on circuit board" className="w-full h-full object-cover opacity-40" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 section-container text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-white">
+            Maintenance & Future <span className="text-green-400">Innovations</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-16">
+            Comprehensive innovation solutions designed for reliability, efficiency, and scalability
+          </p>
         </div>
       </section>
 

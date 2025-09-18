@@ -68,18 +68,26 @@ const Sustainability = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-br from-primary/10 to-secondary/10">
-          <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-          <div className="section-container relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                <span className="gradient-text">Sustainability</span> Leadership
-              </h1>
-              <p className="text-xl text-foreground/70 leading-relaxed mb-8">
-                Pioneering the future of sustainable data centers through innovative technology, 
-                renewable energy, and environmental stewardship that sets new industry standards.
-              </p>
-            </div>
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            <img src="/lovable-uploads/0b794b39-5730-40cf-8bee-fbb8b0a06002.png" alt="Net Zero Commitment - Sustainable technology" className="w-full h-full object-cover opacity-30" />
+            <div className="absolute inset-0 bg-gray-900/80"></div>
+          </div>
+
+          {/* Transparent Overlay Image */}
+          <div className="absolute inset-0 z-5">
+            <img src="/lovable-uploads/da794d21-8baf-440e-85ed-8c8f97eabc66.png" alt="Solar energy utilization in data centers" className="w-full h-full object-cover opacity-40" />
+          </div>
+
+          {/* Content */}
+          <div className="relative z-10 section-container text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-white">
+              <span className="text-green-400">Sustainability</span> Leadership
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-16">
+              Comprehensive sustainability solutions designed for reliability, efficiency, and scalability
+            </p>
           </div>
         </section>
 
