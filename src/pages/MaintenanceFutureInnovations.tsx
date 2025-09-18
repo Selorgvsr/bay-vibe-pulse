@@ -1,24 +1,62 @@
-import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { useNavigate } from 'react-router-dom';
+import { Zap, TrendingUp, Cpu } from 'lucide-react';
 import { Button } from '../components/ui/button';
 
 const MaintenanceFutureInnovations = () => {
+  const navigate = useNavigate();
+
+  const sections = [
+    {
+      id: 'expansion',
+      title: 'Expansion Plans & New Technologies',
+      description: 'We are scaling our data center footprint with next-gen infrastructure, including liquid cooling, modular designs, and renewable energy integration. Our expansion focuses on high-density computing environments to support AI-driven workloads. Future upgrades will enhance efficiency, security, and sustainability.',
+      icon: Zap,
+      route: '/expansion-plans-new-technologies',
+      color: 'bg-green-500'
+    },
+    {
+      id: 'trends',
+      title: 'Emerging Trends in Data Center Infrastructure',
+      description: 'The industry is shifting toward hyperscale data centers, energy-efficient cooling, and cloud repatriation strategies. Innovations like two-phase liquid cooling and AI-powered automation are redefining performance and sustainability. We are adopting cutting-edge solutions to stay ahead of evolving demands.',
+      icon: TrendingUp,
+      route: '/emerging-trends-data-center-infrastructure',
+      color: 'bg-blue-500'
+    },
+    {
+      id: 'ai-edge',
+      title: 'AI & Edge Computing Integration',
+      description: 'AI-driven data processing and edge computing are transforming real-time analytics and decentralized infrastructure. Our roadmap includes low-latency edge deployments to support AI inferencing and high-speed data transmission. These advancements ensure scalability, security, and optimized performance.',
+      icon: Cpu,
+      route: '/ai-edge-computing-integration',
+      color: 'bg-purple-500'
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gray-900 text-white">
       <Header />
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img src="/lovable-uploads/maintenance-future-innovations-hero.png" alt="Modern data center with blue server racks and lighting" className="w-full h-full object-cover opacity-30" />
+          <img 
+            src="/lovable-uploads/maintenance-future-innovations-hero.png" 
+            alt="Modern data center with blue server racks and lighting" 
+            className="w-full h-full object-cover opacity-30" 
+          />
           <div className="absolute inset-0 bg-gray-900/80"></div>
         </div>
 
         {/* Transparent Overlay Image */}
         <div className="absolute inset-0 z-5">
-          <img src="/lovable-uploads/b62a70c3-2070-4796-87cc-bc4b11af0096.png" alt="AI & Edge Computing - Blue AI cube processor on circuit board" className="w-full h-full object-cover opacity-40" />
+          <img 
+            src="/lovable-uploads/b62a70c3-2070-4796-87cc-bc4b11af0096.png" 
+            alt="AI & Edge Computing - Blue AI cube processor on circuit board" 
+            className="w-full h-full object-cover opacity-40" 
+          />
         </div>
 
         {/* Content */}
@@ -32,92 +70,37 @@ const MaintenanceFutureInnovations = () => {
         </div>
       </section>
 
-      {/* Future Innovations & Roadmap Section */}
-      <section className="py-16 bg-gray-900/30">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Future Innovations & Roadmap</h2>
-          
-          <div className="space-y-16">
-            {/* Expansion Plans & New Technologies */}
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="relative cursor-pointer" onClick={() => window.location.href = '/expansion-plans-new-technologies'}>
-                <img 
-                  src="/lovable-uploads/40b163c4-12d9-46da-91e2-ec7065adbdc8.png" 
-                  alt="Expansion Plans & New Technologies - Digital dashboard analytics with transparent overlay" 
-                  className="w-full rounded-lg shadow-xl hover:opacity-90 transition-opacity bg-white/10 backdrop-blur-sm"
-                />
-              </div>
-              <div className="space-y-6">
-                <Link to="/expansion-plans-new-technologies">
-                  <h3 className="text-green-400 text-2xl font-bold hover:text-green-300 cursor-pointer transition-colors">
-                    Expansion Plans & New Technologies
-                  </h3>
-                </Link>
-                <p className="text-gray-300 leading-relaxed">
-                  We are scaling our data center footprint with next-gen infrastructure, 
-                  including liquid cooling, modular designs, and renewable energy 
-                  integration. Our expansion focuses on high-density computing 
-                  environments to support AI-driven workloads. Future upgrades will 
-                  enhance efficiency, security, and sustainability.
-                </p>
-              </div>
-            </div>
-
-            {/* Emerging Trends in Data Center Infrastructure */}
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="order-2 md:order-1 space-y-6">
-                <Link to="/emerging-trends-data-center-infrastructure">
-                  <h3 className="text-blue-400 text-2xl font-bold hover:text-blue-300 cursor-pointer transition-colors">
-                    Emerging Trends in Data Center Infrastructure
-                  </h3>
-                </Link>
-                <p className="text-gray-300 leading-relaxed">
-                  The industry is shifting toward hyperscale data centers, energy-efficient 
-                  cooling, and cloud repatriation strategies. Innovations like two-phase 
-                  liquid cooling and AI-powered automation are redefining performance 
-                  and sustainability. We are adopting cutting-edge solutions to stay ahead 
-                  of evolving demands.
-                </p>
-              </div>
-              <div className="order-1 md:order-2 relative cursor-pointer" onClick={() => window.location.href = '/emerging-trends-data-center-infrastructure'}>
-                <img 
-                  src="/lovable-uploads/b7c7eb17-c398-4f74-b5e4-296c5476de4e.png" 
-                  alt="Emerging Trends - Modern data center infrastructure with blue server lighting and energy flows" 
-                  className="w-full rounded-lg shadow-xl hover:opacity-90 transition-opacity bg-white/10 backdrop-blur-sm"
-                />
-              </div>
-            </div>
-
-            {/* AI & Edge Computing Integration */}
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="relative cursor-pointer" onClick={() => window.location.href = '/ai-edge-computing-integration'}>
-                <img 
-                  src="/lovable-uploads/b62a70c3-2070-4796-87cc-bc4b11af0096.png" 
-                  alt="AI & Edge Computing - Blue AI cube processor on circuit board with glowing connections" 
-                  className="w-full rounded-lg shadow-xl hover:opacity-90 transition-opacity bg-white/10 backdrop-blur-sm"
-                />
-              </div>
-              <div className="space-y-6">
-                <Link to="/ai-edge-computing-integration">
-                  <h3 className="text-purple-400 text-2xl font-bold hover:text-purple-300 cursor-pointer transition-colors">
-                    AI & Edge Computing Integration
-                  </h3>
-                </Link>
-                <p className="text-gray-300 leading-relaxed">
-                  AI-driven data processing and edge computing are transforming real-time 
-                  analytics and decentralized infrastructure. Our roadmap includes 
-                  low-latency edge deployments to support AI inferencing and high-speed 
-                  data transmission. These advancements ensure scalability, security, and 
-                  optimized performance.
-                </p>
-              </div>
-            </div>
+      {/* Content Sections */}
+      <section className="py-20 bg-gray-800">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {sections.map((section) => {
+              const IconComponent = section.icon;
+              return (
+                <div 
+                  key={section.id} 
+                  className="bg-gray-800 rounded-xl p-8 cursor-pointer hover:transform hover:scale-105 transition-all duration-300 hover:bg-gray-700"
+                  onClick={() => navigate(section.route)}
+                >
+                  <div className={`${section.color} w-16 h-16 rounded-lg flex items-center justify-center mb-6`}>
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4">{section.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{section.description}</p>
+                  <div className="mt-6">
+                    <span className="text-green-400 font-medium hover:text-green-300">
+                      Learn More →
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Data Center Maintenance Activities Section */}
-      <section className="py-16">
+      <section className="py-16 bg-gray-900/30">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-white mb-12">Data Center Maintenance Activities</h2>
           
@@ -184,19 +167,20 @@ const MaintenanceFutureInnovations = () => {
         </div>
       </section>
 
-      {/* Get in Touch Section */}
-      <section className="py-16 bg-gradient-to-r from-green-900/20 to-green-700/20">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Get in Touch with Us</h2>
-          <p className="text-gray-300 mb-8">
-            Have questions or need expert support? Our team is ready to help you with all 
-            your data center needs—reach out today!
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-gray-900 to-gray-800">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Get in Touch with Us</h2>
+          <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+            Have questions or need expert support? Our team is ready to help you with all your data center needs—reach out today!
           </p>
-          <Link to="/contact">
-            <Button className="bg-primary hover:bg-primary/90 text-black font-semibold px-8 py-3">
-              CONTACT US →
-            </Button>
-          </Link>
+          <Button 
+            onClick={() => navigate('/contact')}
+            size="lg"
+            className="px-8 py-3"
+          >
+            Contact Us
+          </Button>
         </div>
       </section>
 
