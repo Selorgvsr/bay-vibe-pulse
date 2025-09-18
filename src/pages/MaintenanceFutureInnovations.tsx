@@ -43,8 +43,8 @@ const MaintenanceFutureInnovations = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="/lovable-uploads/maintenance-future-innovations-new.png" 
-            alt="Futuristic data center corridor with blue server racks and advanced lighting systems"
+            src="/lovable-uploads/maintenance-future-hero.png" 
+            alt="Modern data center corridor with blue server racks and lighting" 
             className="w-full h-full object-cover opacity-30" 
           />
           <div className="absolute inset-0 bg-gray-900/80"></div>
