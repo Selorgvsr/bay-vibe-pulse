@@ -45,14 +45,10 @@ const Contact = () => {
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
           {/* Background Image */}
           <div className="absolute inset-0">
-            <img src="/lovable-uploads/8ce75b7a-cec9-451f-8bac-48e378819448.png" alt="Modern data center infrastructure" className="w-full h-full object-cover opacity-30" />
+            <img src="/lovable-uploads/contact-hero.jpg" alt="Contact Us - Digital Communication" className="w-full h-full object-cover opacity-30" />
             <div className="absolute inset-0 bg-gray-900/80"></div>
           </div>
 
-          {/* Transparent Overlay Image */}
-          <div className="absolute inset-0 z-5">
-            <img src="/lovable-uploads/b474f183-a820-4ee0-8cf4-8827d1114708.png" alt="Glass-walled data center with servers and blue lighting" className="w-full h-full object-cover opacity-40" />
-          </div>
 
           {/* Content */}
           <div className="relative z-10 section-container text-center">
