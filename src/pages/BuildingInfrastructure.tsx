@@ -1,36 +1,53 @@
-import { MapPin, Building2, Zap, Wind, Leaf, Shield, ChevronRight, Cpu, Target, Layers } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { MapPin, Building2, Zap, Wind, Leaf, Shield, Cpu, Target, Layers } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Button } from '../components/ui/button';
 import buildingHero from '/lovable-uploads/8ce75b7a-cec9-451f-8bac-48e378819448.png';
-import techInfra from '@/assets/tech-infrastructure.jpg';
 const BuildingInfrastructure = () => {
   const navigate = useNavigate();
   const sections = [{
     id: 'location',
-    label: 'Location & Accessibility',
-    path: '/location-accessibility'
+    title: 'Location & Accessibility',
+    description: 'Strategic location advantages and accessibility features ensure optimal data center placement. Prime connectivity and infrastructure access for seamless operations.',
+    icon: MapPin,
+    route: '/location-accessibility',
+    color: 'bg-blue-500'
   }, {
     id: 'structural',
-    label: 'Structural Design & Layout',
-    path: '/structural-design'
+    title: 'Structural Design & Layout',
+    description: 'Advanced structural design and layout optimization maximize efficiency and scalability. Engineering excellence ensures robust foundation for critical infrastructure.',
+    icon: Building2,
+    route: '/structural-design',
+    color: 'bg-green-500'
   }, {
     id: 'power',
-    label: 'Power Redundancy & Backup',
-    path: '/power-redundancy'
+    title: 'Power Redundancy & Backup',
+    description: 'Comprehensive power redundancy and backup systems guarantee uninterrupted operations. Multiple power sources and UPS systems ensure maximum uptime.',
+    icon: Zap,
+    route: '/power-redundancy',
+    color: 'bg-purple-500'
   }, {
     id: 'cooling',
-    label: 'Cooling & Climate Control',
-    path: '/cooling-climate-control'
+    title: 'Cooling & Climate Control',
+    description: 'Advanced cooling and climate control systems maintain optimal operating conditions. Efficient temperature management and airflow optimization throughout the facility.',
+    icon: Wind,
+    route: '/cooling-climate-control',
+    color: 'bg-red-500'
   }, {
     id: 'sustainability',
-    label: 'Sustainability & Energy Efficiency',
-    path: '/sustainability-energy-efficiency'
+    title: 'Sustainability & Energy Efficiency',
+    description: 'Sustainable practices and energy efficiency measures reduce environmental impact. Green technologies and renewable energy integration for responsible operations.',
+    icon: Leaf,
+    route: '/sustainability-energy-efficiency',
+    color: 'bg-cyan-500'
   }, {
     id: 'compliance',
-    label: 'Compliance & Certification Standards',
-    path: '/compliance-certification'
+    title: 'Compliance & Certification Standards',
+    description: 'Strict compliance and certification standards ensure industry-leading security and reliability. Meeting international standards for data center operations.',
+    icon: Shield,
+    route: '/compliance-certification',
+    color: 'bg-orange-500'
   }];
   const features = [{
     icon: Target,
@@ -45,7 +62,7 @@ const BuildingInfrastructure = () => {
     title: 'Scalable Construction',
     description: 'Built with future growth in mind, our infrastructure supports seamless expansion without disruption.'
   }];
-  return <div className="min-h-screen bg-gray-900">
+  return <div className="min-h-screen bg-gray-900 text-white">
       <Header />
       <main>
         {/* Hero Section */}
@@ -74,19 +91,23 @@ const BuildingInfrastructure = () => {
 
         {/* Content Sections */}
         <section className="py-20 bg-gray-800">
-          <div className="section-container">
-            <div className="grid gap-12">
-              {sections.map((section, index) => <Link key={section.id} to={section.path} className="group block bg-gray-700/30 rounded-2xl p-8 hover:bg-gray-700/50 transition-all duration-300 hover:-translate-y-2">
-                  <div className="flex items-center justify-between">
-                    <h2 className="text-2xl md:text-3xl font-bold text-white group-hover:text-green-400 transition-colors duration-300">
-                      {section.label}
-                    </h2>
-                    <ChevronRight className="w-8 h-8 text-green-400 group-hover:translate-x-2 transition-transform duration-300" />
-                  </div>
-                  <p className="text-gray-300 mt-4 text-lg">
-                    Click to explore detailed information about {section.label.toLowerCase()}
-                  </p>
-                </Link>)}
+          <div className="container mx-auto px-6">
+            <div className="grid md:grid-cols-2 gap-8">
+              {sections.map(section => {
+              const IconComponent = section.icon;
+              return <div key={section.id} className="bg-gray-800 rounded-xl p-8 cursor-pointer hover:transform hover:scale-105 transition-all duration-300 hover:bg-gray-700" onClick={() => navigate(section.route)}>
+                    <div className={`${section.color} w-16 h-16 rounded-lg flex items-center justify-center mb-6`}>
+                      <IconComponent className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4">{section.title}</h3>
+                    <p className="text-gray-300 leading-relaxed">{section.description}</p>
+                    <div className="mt-6">
+                      <span className="text-green-400 font-medium hover:text-green-300">
+                        Learn More →
+                      </span>
+                    </div>
+                  </div>;
+            })}
             </div>
           </div>
         </section>
@@ -114,18 +135,18 @@ const BuildingInfrastructure = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-gray-900 text-white">
+        <section className="py-16 bg-gradient-to-r from-gray-900 to-gray-800">
           <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Get in Touch with Us</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">Get in Touch with Us</h2>
             <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
               Have questions or need expert support? Our team is ready to help you with all your data center needs—reach out today!
             </p>
             <Button 
               onClick={() => navigate('/contact')}
               size="lg"
-              className="px-8 py-3 bg-green-500 hover:bg-green-600 text-white"
+              className="px-8 py-3"
             >
-              CONTACT US →
+              Contact Us
             </Button>
           </div>
         </section>
