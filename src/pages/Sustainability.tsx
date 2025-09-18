@@ -61,7 +61,7 @@ const Sustainability = () => {
         {/* Content */}
         <div className="relative z-10 section-container text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-white">
-            <span className="text-green-400">Sustainability</span> Leadership
+            <span className="text-green-400">Sustainability</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-16">
             Comprehensive sustainability solutions designed for reliability, efficiency, and scalability
