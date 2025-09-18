@@ -54,7 +54,7 @@ const Sustainability = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img src="/lovable-uploads/sustainability-hero-green-datacenter.jpg" alt="Green sustainable data center with plants and eco-friendly technology" className="w-full h-full object-cover opacity-30" />
-          <div className="absolute inset-0 bg-gray-900/80"></div>
+          <div className="absolute inset-0 bg-gray-900/40"></div>
         </div>
 
 
