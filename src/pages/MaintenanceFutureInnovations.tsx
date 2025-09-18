@@ -50,14 +50,6 @@ const MaintenanceFutureInnovations = () => {
           <div className="absolute inset-0 bg-gray-900/80"></div>
         </div>
 
-        {/* Transparent Overlay Image */}
-        <div className="absolute inset-0 z-5">
-          <img 
-            src="/lovable-uploads/b62a70c3-2070-4796-87cc-bc4b11af0096.png" 
-            alt="AI & Edge Computing - Blue AI cube processor on circuit board" 
-            className="w-full h-full object-cover opacity-40" 
-          />
-        </div>
 
         {/* Content */}
         <div className="relative z-10 section-container text-center">
