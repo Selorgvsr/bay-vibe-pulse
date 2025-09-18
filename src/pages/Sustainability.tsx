@@ -57,10 +57,6 @@ const Sustainability = () => {
           <div className="absolute inset-0 bg-gray-900/80"></div>
         </div>
 
-        {/* Transparent Overlay Image */}
-        <div className="absolute inset-0 z-5">
-          <img src="/lovable-uploads/sustainability-hero-green-datacenter.jpg" alt="Green sustainable data center with plants and eco-friendly technology" className="w-full h-full object-cover opacity-40" />
-        </div>
 
         {/* Content */}
         <div className="relative z-10 section-container text-center">
