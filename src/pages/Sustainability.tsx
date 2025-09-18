@@ -53,7 +53,7 @@ const Sustainability = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img src="/lovable-uploads/0b794b39-5730-40cf-8bee-fbb8b0a06002.png" alt="Net Zero Commitment - Sustainable technology" className="w-full h-full object-cover opacity-30" />
+          <img src="/lovable-uploads/sustainability-hero-green-datacenter.jpg" alt="Green sustainable data center with plants and eco-friendly technology" className="w-full h-full object-cover opacity-30" />
           <div className="absolute inset-0 bg-gray-900/80"></div>
         </div>
 
