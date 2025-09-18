@@ -187,7 +187,7 @@ const Contact = () => {
                       <div>
                         <h4 className="font-semibold mb-2">Email Address</h4>
                         <p className="text-foreground/70 leading-relaxed">
-                          shekar@marvel100logisticspark.com<br />
+                          shekar@bayvibedc.com<br />
                           Available for all inquiries
                         </p>
                       </div>
