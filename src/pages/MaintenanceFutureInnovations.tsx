@@ -47,7 +47,7 @@ const MaintenanceFutureInnovations = () => {
             alt="Modern data center corridor with blue server racks and lighting" 
             className="w-full h-full object-cover opacity-30" 
           />
-          <div className="absolute inset-0 bg-gray-900/80"></div>
+          <div className="absolute inset-0 bg-gray-900/40"></div>
         </div>
 
 
