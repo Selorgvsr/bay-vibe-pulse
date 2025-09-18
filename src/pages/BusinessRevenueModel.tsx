@@ -92,20 +92,11 @@ const BusinessRevenueModel = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="/lovable-uploads/1fda760c-4d3d-4178-a311-2398db42091b.png" 
-            alt="Business Revenue Model - Buildings with dollar signs" 
-            className="w-full h-full object-cover opacity-30" 
-          />
-          <div className="absolute inset-0 bg-gray-900/80"></div>
-        </div>
-
-        {/* Transparent Overlay Image */}
-        <div className="absolute inset-0 z-5">
-          <img 
-            src="/lovable-uploads/business-revenue-hero.png" 
-            alt="Business revenue infrastructure" 
+            src="/lovable-uploads/business-revenue-model-hero.jpg" 
+            alt="Futuristic city with 5G network technology representing business growth and digital transformation" 
             className="w-full h-full object-cover opacity-40" 
           />
+          <div className="absolute inset-0 bg-gray-900/60"></div>
         </div>
 
         {/* Content */}
