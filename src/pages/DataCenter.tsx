@@ -77,7 +77,7 @@ const DataCenter = () => {
           {/* Background Image */}
           <div className="absolute inset-0">
             <img src="/lovable-uploads/glowing-skyscraper-hero.jpg" alt="Glowing Skyscraper Data Center at Dusk" className="w-full h-full object-cover opacity-30" />
-            <div className="absolute inset-0 bg-gray-900/40"></div>
+            <div className="absolute inset-0 bg-gray-900/20"></div>
           </div>
 
 
