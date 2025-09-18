@@ -45,6 +45,7 @@ import CloudOperations from "./pages/CloudOperations";
 import HostingServices from "./pages/HostingServices";
 import ManagedSolutions from "./pages/ManagedSolutions";
 import InformationServices from "./pages/InformationServices";
+import ScrollToTop from "./components/ScrollToTop";
 
 import NotFound from "./pages/NotFound";
 
@@ -56,6 +57,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/data-center" element={<DataCenter />} />
