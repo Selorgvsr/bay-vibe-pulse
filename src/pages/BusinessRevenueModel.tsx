@@ -96,7 +96,7 @@ const BusinessRevenueModel = () => {
             alt="Futuristic city with 5G network technology representing business growth and digital transformation" 
             className="w-full h-full object-cover opacity-40" 
           />
-          <div className="absolute inset-0 bg-gray-900/30"></div>
+          <div className="absolute inset-0 bg-gray-900/15"></div>
         </div>
 
         {/* Content */}
