@@ -76,7 +76,7 @@ const DataCenter = () => {
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
           {/* Background Image */}
           <div className="absolute inset-0">
-            <img src="/lovable-uploads/glowing-skyscraper-hero.jpg" alt="Glowing Skyscraper Data Center at Dusk" className="w-full h-full object-cover opacity-30" />
+            <img src="/lovable-uploads/glowing-skyscraper-hero.jpg" alt="Glowing Skyscraper Data Center at Dusk" className="w-full h-full object-cover opacity-50" />
             <div className="absolute inset-0 bg-gray-900/20"></div>
           </div>
 
