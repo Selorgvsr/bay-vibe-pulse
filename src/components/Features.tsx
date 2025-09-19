@@ -60,7 +60,7 @@ const Features = () => {
               </div>;
         })}
         </div>
-              <video width="1200" controls>
+              <video width="1200" controls className="mt-16">
         <source src=" https://datacenter-lm.s3.us-east-1.amazonaws.com/Data+center/Homepage/Data+center+video+compressed.mp4" type="video/mp4" />
       </video>
         {/* Call to Action */}
